@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-require('dotenv').config()
+
 
 const dbConnect = () => {
     const connectionParams = { useNewUrlParser: true };

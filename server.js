@@ -5,6 +5,8 @@ const movieRoutes = require("./routes/movies");
 const cors = require("cors");
 const app = express();
 
+require('dotenv').config()
+
 dbConnect();
 
 app.use(express.json());

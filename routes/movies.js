@@ -2,6 +2,13 @@ const router = require("express").Router();
 const Movie = require("../models/Movie");
 const movies = require("../config/movies.json");
 
+router.get("", async(req,res) => {
+	try{
+	res.render("hello")
+}catch(e){
+
+}})
+
 router.get("/movies", async (req, res) => {
 	try {
 		const page = parseInt(req.query.page) - 1 || 0;
@@ -55,8 +62,8 @@ router.get("/movies", async (req, res) => {
 			genres: genreOptions,
 			movies,
 		};
-
-		res.status(200).json(response);
+		res.render("results",rows=response)
+		//res.status(200).json(response);
 	} catch (err) {
 		console.log(err);
 		res.status(500).json({ error: true, message: "Internal Server Error" });

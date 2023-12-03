@@ -1,0 +1,24 @@
+
+    <% rows %>
+    <%= console.log(rows) %> 
+ <h2>Here are the results: </h2>
+ <br><br>
+ <ol>
+    <% rows.movies.forEach(function(row) { %>
+     
+      <li>
+       
+       <%= row.name %> is the name.
+         <%= row.content %> is the content.
+         <%= row.year %> is the year.
+         <%= row.rating %> is the year.
+         <br>
+         Image is given below:
+         <img src="<%= row.img %>" alt="Flowers in Chania">
+     
+      <p style="color:red;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+      </li>
+    <% }); %>
+  </ol>
+  <h3><a href="/">Click here to return to the search page.</a></h3>
+ 

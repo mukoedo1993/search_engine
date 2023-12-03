@@ -14,5 +14,5 @@ app.use("/api", movieRoutes);
 
 app.set('view engine', 'ejs')
 
-const port = process.env.PORT || 8080;
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+const PORT = process.env.PORT || 8080
+app.listen(PORT, () => console.log("Server is running"));
